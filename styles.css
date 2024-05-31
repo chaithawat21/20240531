@@ -1,0 +1,243 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./assets/fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./assets/fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+ul li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+:root {
+    --DarkSlateGrey: hsl(234, 29%, 20%);
+    --CharcoalGrey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+
+    --Tomato: hsla(4, 100%, 67%,.2);
+    
+
+    --Orange: rgba(255,99,77);
+    --OrangeLight: rgba(255,85,118,.5);
+    --Pink: rgba(255,85,118);
+    
+
+    font-family: 'roboto';
+}
+
+body {
+    min-height: 100svh;
+    background-color: var(--CharcoalGrey);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.subscribe-card {
+    /* display: none; */
+    display: flex;
+    flex-direction: row;
+    background-color: var(--White);
+    padding-block: 1.5rem;
+    border-radius: 30px;
+    
+}
+.subscribe-text {
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+    
+}
+.subscribe-head {
+    font-size: 3.5rem;
+    color: var(--DarkSlateGrey);
+}
+.subscribe-p {
+    padding-top: 2rem;
+    color: var(--DarkSlateGrey);
+}
+.subscribe-list {
+    padding-top: 2rem;
+}
+.subscribe-list li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    
+    padding-block: .5rem;
+}
+.subscribe-list li p {
+    color: var(--DarkSlateGrey);
+}
+.email {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.email-head {
+    
+    font-weight: bold;
+    font-size: .8rem;
+    color: var(--DarkSlateGrey);
+}
+.email-error {
+  
+    display: none;
+    color: var(--Orange);
+    font-size: .8rem;
+    font-weight: bold;
+}
+.email-input {
+    margin-top: .5rem;
+    padding-left: 1.5rem;
+    padding-block: 1rem;
+    border-radius: 10px;
+    color: var(--Grey);
+    border: 1px solid var(--Grey);
+    outline: none;
+    cursor: pointer;
+}
+.email-input:focus {
+    border: 1px solid var(--DarkSlateGrey);
+    color: var(--DarkSlateGrey);
+    outline: none;
+}
+
+
+.subscribe-click {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--DarkSlateGrey);
+    color: var(--White);
+    font-weight: 700;
+    cursor: pointer;
+}
+.subscribe-click:hover {
+    background: linear-gradient(90deg, var(--Pink), var(--Orange));
+    box-shadow: 0 10px 20px 0 var(--Tomato);
+}
+.subscribe-img {
+    padding-inline: 1.5rem;
+}
+
+
+.success-message {
+    max-width: 28rem;
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--White);
+    padding: 2rem;
+    border-radius: 30px;
+    
+}
+.success-icon {
+    width: 3rem;
+}
+.success-head {
+    color: var(--DarkSlateGrey);
+    font-size: 3.5rem;
+}
+.success-p {
+    color: var(--DarkSlateGrey);
+    font-weight: 400;
+}
+.success-click {
+    background-color: var(--DarkSlateGrey);
+    color: var(--White);
+    border: none;
+    padding: 1rem;
+    border-radius: 10px;
+    font-family: 700;
+    margin-block: 1rem;
+    cursor: pointer;
+}
+.success-click:hover {
+    background: linear-gradient(90deg, var(--Pink), var(--Orange));
+    box-shadow: 0 10px 20px 0 var(--Tomato);
+}
+footer {
+    position: absolute;
+    bottom: 0rem;
+    padding: 1rem;
+    text-align: center;
+    font-size: .7rem;
+}
+.attribution {
+    color: var(--White);
+}
+.attribution a {
+    color: var(--White);
+}
+
+@media (max-width: 375px) {
+    .subscribe-card {
+        /* display: none; */
+        display: flex;
+        flex-direction: column-reverse;
+        padding-block: 0;
+        border-radius: 0;
+        
+    }
+    .subscribe-text {
+        padding: 2rem;
+    }
+    .subscribe-head {
+        font-size: 2.5rem;
+    }
+    .subscribe-img {
+        width: 100%;
+        padding-inline: 0rem;
+    }
+    .subscribe-list li {
+        align-items: start;
+
+
+    }
+    .success-message {
+        height: 100vh;
+        display: none;
+        /* display: flex; */
+        justify-content: center;
+        border-radius: 0px;
+        gap: 2rem;
+        padding: 1.5rem;
+    }
+    .success-head {
+        font-size: 2.5rem;
+    }
+    .success-p {
+        margin-bottom: 4rem;
+    }
+    .success-click {
+        position: relative;
+        top: 10rem;
+    }
+    footer {
+       display: none;
+    }
+}
